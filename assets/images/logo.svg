@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" class="logo-container">
+  <!-- 核心符号 -->
+  <g id="symbol" transform="translate(80 60)">
+    <!-- 星轨基底 -->
+    <path 
+      d="M120 120a80 80 0 1 1 0-160 80 80 0 0 1 0 160z"
+      fill="none"
+      stroke="#00C1D4"
+      stroke-width="12"
+      stroke-dasharray="20 8"
+      class="orbit-path"/>
+    
+    <!-- 原子核结构 -->
+    <g class="nucleus">
+      <circle cx="120" cy="40" r="16" fill="#2A3F6D"/>
+      <circle cx="120" cy="40" r="8" fill="#00C1D4"/>
+    </g>
+    
+    <!-- 脉冲星轨迹 -->
+    <path 
+      d="M120 40l60-20m-60 20l-45 32m45-32v80"
+      stroke="#FFD700"
+      stroke-width="4"
+      stroke-linecap="round"
+      opacity="0.8"
+      class="pulse"/>
+  </g>
+
+  <!-- 文字标识 -->
+  <g id="typography" transform="translate(240 100)">
+    <!-- 中文主标 -->
+    <text 
+      x="0" y="0"
+      font-family="方正兰亭纤黑"
+      font-size="56"
+      fill="#2A3F6D"
+      class="cn-text">
+      觅星实验室
+    </text>
+    
+    <!-- 英文副标 -->
+    <text 
+      x="0" y="50"
+      font-family="Montserrat"
+      font-size="28"
+      fill="#666"
+      class="en-text">
+      Mistar Lab
+    </text>
+  </g>
+
+  <style>
+    /* 暗色模式适配 */
+    @media (prefers-color-scheme: dark) {
+      .logo-container {
+        background: #1A1A1A;
+      }
+      .cn-text { fill: #F0F0F0 !important; }
+      .orbit-path { stroke: #2DD4BF; }
+      .nucleus circle { fill: #1E3A8A; }
+    }
+
+    /* 动态交互 */
+    .orbit-path {
+      animation: rotate 20s linear infinite;
+      transform-origin: 120px 120px;
+    }
+    .pulse {
+      animation: spark 1.5s ease-in-out infinite;
+    }
+    
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes spark {
+      0%,100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+  </style>
+</svg>
