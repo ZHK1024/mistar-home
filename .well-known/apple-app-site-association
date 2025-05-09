@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "75983KZ5E7.com.zhk.AppClipDemo.Clip",
+        "paths": ["/miniapp/*"]
+      }
+    ]
+  }
+}
