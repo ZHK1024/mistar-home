@@ -4,4 +4,4 @@
 include:
   - .well-known # 包含隐藏目录
 mime_types:
-  ".apple-app-site-association": "application/json"
+  .apple-app-site-association: "application/json"
