@@ -1,0 +1,7 @@
+# 步骤：
+# 1. 在项目根目录创建或修改 _config.yml
+# 2. 添加以下配置：
+include:
+  - .well-known # 包含隐藏目录
+mime_types:
+  ".apple-app-site-association": "application/json"
